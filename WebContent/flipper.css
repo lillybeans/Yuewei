@@ -61,11 +61,12 @@
   -moz-transition:all 1s east-in-out;
 }
 
-.card:hover {
+.card:hover, .card.hovered {
   transform:rotateY(180deg);
   -webkit-transform: rotateY(180deg);
   -moz-transform:rotateY(180deg);
 }
+
 
 .card .front {
   -webkit-backface-visibility:hidden;
