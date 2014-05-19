@@ -8,6 +8,23 @@
 <link href="layout.css" rel="stylesheet"/> 
 <link href="flipper.css" rel="stylesheet"/>
 
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $("#links a").click(function(event){
+        event.preventDefault(); //or else page redirects before fade out/fade in animation
+        targetLink = this.href;
+        $("#iframe").fadeOut('2000', redirectPage); //2000 milliseconds fade out
+    });
+    
+    function redirectPage() {
+        $("#iframe").attr("src", targetLink).load(function(){$(this).fadeIn('2000');});
+    }
+});
+</script>
+
 <table id=maincontainer>
 	<tr>
 		<td class=banner>
@@ -15,7 +32,7 @@
 		<img src="layout/banner.png">
 		<br><br>
 		
-		<table width=730>
+		<table id=links width=730>
 		<tr>
 		
 		<td width=20%>
