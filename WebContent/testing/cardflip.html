@@ -9,46 +9,55 @@
 <style>
 
 .card-container {
-  height: 150px;
+  height:233px; 
+  width:241px; 
+  
+  perspective:600;
   -webkit-perspective: 600;
-  position: relative;
-  width: 150px;
+  -moz-perspective:600;
 }
 .card {
-  height: 100%;
-  position: absolute;
-  -webkit-transform-style: preserve-3d;
+  height:100%;
+  width:100%;
+  
+  transform-style:preserve-3d;
+  transition:all 1s ease-in-out;
+  -webkit-transform-style:preserve-3d;
   -webkit-transition: all 1s ease-in-out;
-  -moz-transition: all 1s ease-in-out;
-  width: 100%;
+  -moz-transform-style: preserve-3d;
+  -moz-transition:all 1s east-in-out;
 }
 .card:hover {
   -webkit-transform: rotateY(180deg);
 }
-.card .side {
+.card .front {
   -webkit-backface-visibility: hidden;
-  border-radius: 6px;
-  height: 100%;
-  position: absolute;
-  overflow: hidden;
-  width: 100%;
+  -moz-backface-visibility:hidden;
+  backface-visibility:hidden;
+  
+  position:absolute;
 }
 .card .back {
-  background: #eaeaed;
-  color: #0087cc;
-  line-height: 150px;
-  text-align: center;
   -webkit-transform: rotateY(180deg);
+  -moz-transform:rotateY(180deg);
+  transform:rotateY(180deg);
 }
 </style>
 
 <div class="card-container">
   <div class="card">
-    <div class="side"><img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/29841/jimmy.jpg" alt="Jimmy Eat World"></div>
-    <div class="side back">Jimmy Eat World</div>
+    <div class="front"><img src="../home/challenge.png"></div>
+    <div class="front back"><img src="../home/impact.png"></div>
   </div>
 </div>
 
+
+Explanations:
+<br>
+<br>1. .card-container: 3d space enclosing all animations, the depth of the view of the box, known as "perspective", must be specified here.
+<br>2. .card: the actual card where the animation will be performed. Specify transition, and also, preserve-3d ensures that when you flip a DIFFERENT image is shown on the reverse side
+<br>3. .card .front: properties of front side of the card
+<br>4. .card .back: properties of back side of the card
 
 </body>
 </html>
