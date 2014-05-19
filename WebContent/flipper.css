@@ -1,0 +1,78 @@
+.bannercontainer {
+  height:40px; 
+  width:140px; 
+  
+  perspective:600;
+  -webkit-perspective: 600;
+  -moz-perspective:600;
+}
+
+.banner {
+  height:100%;
+  width:100%;
+  
+  transform-style:preserve-3d;
+  transition:all 1s ease-in-out;
+  -webkit-transform-style:preserve-3d;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transform-style: preserve-3d;
+  -moz-transition:all 1s east-in-out;
+}
+
+.banner:hover {
+  -webkit-transform: rotateX(180deg);
+}
+
+.banner .front {
+  -webkit-backface-visibility:hidden;
+  -moz-backface-visibility:hidden;
+  backface-visibility:hidden;
+  
+  position:absolute;
+}
+
+.banner .back {
+  -webkit-transform: rotateX(180deg);
+  -moz-transform:rotateX(180deg);
+  transform:rotateX(180deg);
+}
+
+  
+.cardcontainer {
+  height:233px; 
+  width:241px; 
+  
+  perspective:800;
+  -webkit-perspective: 800;
+  -moz-perspective:800;
+}
+
+.card {
+  height:100%;
+  width:100%;
+  
+  transform-style:preserve-3d;
+  transition:all 1s ease-in-out;
+  -webkit-transform-style:preserve-3d;
+  -webkit-transition: all 1s ease-in-out;
+  -moz-transform-style: preserve-3d;
+  -moz-transition:all 1s east-in-out;
+}
+
+.card:hover {
+  -webkit-transform: rotateY(180deg);
+}
+
+.card .front {
+  -webkit-backface-visibility:hidden;
+  -moz-backface-visibility:hidden;
+  backface-visibility:hidden;
+  
+  position:absolute;
+}
+
+.card .back {
+  -webkit-transform: rotateY(180deg);
+  -moz-transform:rotateY(180deg);
+  transform:rotateY(180deg);
+}

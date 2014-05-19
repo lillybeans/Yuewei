@@ -8,7 +8,7 @@
 
 <style>
 
-.card-container {
+.container {
   height:233px; 
   width:241px; 
   
@@ -31,20 +31,22 @@
   -webkit-transform: rotateY(180deg);
 }
 .card .front {
-  -webkit-backface-visibility: hidden;
+  -webkit-backface-visibility:hidden;
   -moz-backface-visibility:hidden;
   backface-visibility:hidden;
   
   position:absolute;
 }
+
 .card .back {
   -webkit-transform: rotateY(180deg);
   -moz-transform:rotateY(180deg);
   transform:rotateY(180deg);
 }
+
 </style>
 
-<div class="card-container">
+<div class="container">
   <div class="card">
     <div class="front"><img src="../home/challenge.png"></div>
     <div class="front back"><img src="../home/impact.png"></div>
@@ -57,7 +59,8 @@ Explanations:
 <br>1. .card-container: 3d space enclosing all animations, the depth of the view of the box, known as "perspective", must be specified here.
 <br>2. .card: the actual card where the animation will be performed. Specify transition, and also, preserve-3d ensures that when you flip a DIFFERENT image is shown on the reverse side
 <br>3. .card .front: properties of front side of the card
-<br>4. .card .back: properties of back side of the card
+<br>4. .card .back: properties of back side of the card. The rotateY(180deg) means the transformation done to the IMAGE on the back side! this is not animation of any sort.
+<br>5. .card:hover: action taken when you hover on it
 
 </body>
 </html>
