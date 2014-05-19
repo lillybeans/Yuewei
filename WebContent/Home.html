@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+</head>
+<body>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+</script>
+
+<script>
+$(document).ready(function()
+{
+	 updateScreen();
+	 $(window).resize(function() {
+		 updateScreen();
+	 });
+});
+
+function updateScreen() {
+	$('.resizable').each(function() {
+		$(this).css("height", window.innerWidth*0.25);
+		$(this).css("width", window.innerWidth*0.25);
+	});
+};
+
+
+</script>
+<link href="layout.css" rel="stylesheet"/> 
+<table id=maincontainer>
+	<tr>
+		<td class=banner>
+		<center>
+		<img src="layout/banner.png">
+		<br><br>
+		<a href=main.html class=navbuttonleft target=iframe>主页</a>
+		<a href=aboutus.html class=navbuttoncenter target=iframe>关于我们</a> 
+		<a href=events.html class=navbuttoncenter target=iframe>活动</a> 
+		<a href=team.html class=navbuttoncenter target=iframe>团队</a> 
+		<a href=contact.html class=navbuttonright target=iframe>联系</a>
+		</center>
+		</td>
+		<td class=foxshadow rowspan=2>
+		</td>
+	</tr>
+	<tr>
+	<td class=iframecontainer>
+	<iframe id=iframe src=main.html></iframe>
+	</td>
+	</tr>
+</table>
+</body>
+</html>
