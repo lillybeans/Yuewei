@@ -4,6 +4,18 @@ html,body{
 	background-color:#564940;
 }
 
+nav ul{
+	display:inline;
+	text-align:center;
+	padding:0px;
+}
+
+nav ul li{
+	list-style:none;
+	display:inline-block;
+	padding-right:5px;
+}
+
 #login{
 	position:absolute;
 	top:15px;
@@ -35,7 +47,7 @@ html,body{
 #maincontainer tr td.banner{
 	width:70%;
 	height:30%;
-	font-size:20px;
+	text-align:center;
 }
 
 #maincontainer tr td.navigation{

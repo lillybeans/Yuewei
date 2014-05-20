@@ -30,69 +30,87 @@ $(document).ready(function() {
 
 <div id=login>
 <a href=login.html id=loginbutton target=iframe>登陆 / Sign in ▾</a>
+
+<nav>
+  <ul>
+    <li id="login">
+      <a id="login-trigger" href="#">
+        Log in <span>▼</span>
+      </a>
+      <div id="login-content">
+        <form>
+          <fieldset id="inputs">
+            <input id="username" type="email" name="Email" placeholder="Your email address" required>   
+            <input id="password" type="password" name="Password" placeholder="Password" required>
+          </fieldset>
+          <fieldset id="actions">
+            <input type="submit" id="submit" value="Log in">
+            <label><input type="checkbox" checked="checked"> Keep me signed in</label>
+          </fieldset>
+        </form>
+      </div>                     
+    </li>
+    <li id="signup">
+      <a href="">Sign up FREE</a>
+    </li>
+  </ul>
+</nav>
+
 </div>
 
 <table id=maincontainer>
 	<tr>
 		<td class=banner>
-		<center>
 		<img src="layout/banner.png">
 		<br><br>
 		
-		<table id=links width=730>
-		<tr>
+		<nav>
 		
-		<td width=20%>
-		<div class="buttoncontainer">
- 		<div class="button">
-   		<div class="front"><a href=main.html class=navbuttonleft target=iframe>主页</a></div>
-    	<div class="front back"><a href=main.html class=navbuttonleft_back target=iframe>Home</a></div>
- 		</div>
- 		</div>
- 		</td>
- 		
- 		<td width=20%>
-		<div class="buttoncontainer">
- 		<div class="button">
-   		<div class="front"><a href=aboutus.html class=navbuttoncenter target=iframe>关于我们</a></div>
-    	<div class="front back"><a href=aboutus.html class=navbuttoncenter_back target=iframe>About Us</a></div>
-    	</div>
-    	</div>
-    	</td>
+		<ul>
+			<li>
+			<div class="buttoncontainer">
+ 			<div class="button">
+   			<div class="front"><a href=main.html class=navbuttonleft target=iframe>主页</a></div>
+    		<div class="front back"><a href=main.html class=navbuttonleft_back target=iframe>Home</a></div>
+ 			</div>
+ 			</div>
+ 			
+ 			<li>
+ 			<div class="buttoncontainer">
+ 			<div class="button">
+   			<div class="front"><a href=aboutus.html class=navbuttoncenter target=iframe>关于我们</a></div>
+    		<div class="front back"><a href=aboutus.html class=navbuttoncenter_back target=iframe>About Us</a></div>
+    		</div>
+    		</div>
 		
+			<li>
+			<div class="buttoncontainer">
+ 			<div class="button">
+   			<div class="front"><a href=events.html class=navbuttoncenter target=iframe>活动</a></div>
+    		<div class="front back"><a href=events.html class=navbuttoncenter_back target=iframe>Events</a></div>
+    		</div>
+    		</div>
+    		
+    		<li>
+    		<div class="buttoncontainer">
+ 			<div class="button">
+   			<div class="front"><a href=team.html class=navbuttoncenter target=iframe>团队</a></div>
+    		<div class="front back"><a href=team.html class=navbuttoncenter_back target=iframe>Team</a></div>
+    		</div>
+    		</div>
+    		
+    		<li>
+    		<div class="buttoncontainer">
+ 			<div class="button">
+   			<div class="front"><a href=contact.html class=navbuttonright target=iframe>联系</a></div>
+    		<div class="front back"><a href=contact.html class=navbuttonright_back target=iframe>Contact Us</a></div>
+    		</div>
+    		</div>
+    		
+		</ul>
 		
-		<td width=20%>
-		<div class="buttoncontainer">
- 		<div class="button">
-   		<div class="front"><a href=events.html class=navbuttoncenter target=iframe>活动</a></div>
-    	<div class="front back"><a href=events.html class=navbuttoncenter_back target=iframe>Events</a></div>
-    	</div>
-    	</div>
-    	</td>
-    	
-    	
-    	<td width=20%>
-		<div class="buttoncontainer">
- 		<div class="button">
-   		<div class="front"><a href=team.html class=navbuttoncenter target=iframe>团队</a></div>
-    	<div class="front back"><a href=team.html class=navbuttoncenter_back target=iframe>Team</a></div>
-    	</div>
-    	</div>
-    	</td>
-    	
-    	
-    	<td width=20%>
-		<div class="buttoncontainer">
- 		<div class="button">
-   		<div class="front"><a href=contact.html class=navbuttonright target=iframe>联系</a></div>
-    	<div class="front back"><a href=contact.html class=navbuttonright_back target=iframe>Contact Us</a></div>
-    	</div>
-    	</div>
-    	</td>
+		</nav>
 		
-		</td></tr></table>
-		
-		</center>
 		</td>
 		<td class=foxshadow rowspan=2>
 		</td>
