@@ -43,8 +43,13 @@
 
 #inputs{
 	border-radius:5px;
-	border:1px solid #564940;
+	border:2px solid #564940;
 }
+
+#inputs #username{
+	margin-top:5px;
+}
+
 #inputs input {
   background: #fff;
   padding: 6px 5px;
@@ -62,11 +67,7 @@
 
 /** submit **/
 
-#login #actions {
-  margin: 10px 0 0 0;
-}
-
-#login #submit {    
+#login #submit, #login #register {    
   background-color: #f4c038;
   -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
@@ -76,14 +77,20 @@
   border: 1px solid #7e1515;
   height: 30px;
   padding: 0;
-  width: 70px;
+  width: 75px;
   font-size:14px;
   color: #fff;
   text-align:center;
 }
 
+#login #submit{
+  margin-right:10px;
+}
+
 #login #submit:hover,
-#login #submit:focus {    
+#login #submit:focus,
+#login #register:hover,
+#login #register:focus {    
   background-color: #ff8400;
 } 
 
@@ -94,15 +101,4 @@
 
 #login #submit::-moz-focus-inner {
   border: none;
-}
-
-#login label {
-  float: right;
-  line-height: 30px;
-}
-
-#login label input {
-  position: relative;
-  top: 2px;
-  right: 2px;
 }
