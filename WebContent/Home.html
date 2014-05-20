@@ -26,7 +26,7 @@ $(document).ready(function() {
     }
 });
 
-/** log-in **/
+/** Display log-in on click **/
 $(document).ready(function(){
 	  $('.login-trigger').click(function(){
 	    $(this).next('#login-content').slideToggle();
@@ -36,8 +36,15 @@ $(document).ready(function(){
 	     else $(this).find('#triangle').html('&#x25BC;')
 	    })
 	});
+
+/** Display forgot password on click**/
+$(document).ready(function(){
+	  $('.forgot-trigger').click(function(){
+	    $('#forgot-content').slideToggle();
+	    $(this).toggleClass('active');          
+	    })
+	});
 	
- 
 </script>
 
 <div id=login>
@@ -48,11 +55,20 @@ $(document).ready(function(){
             <input id="username" name="Username" placeholder="用户名/Username" required><br>
             <input id="password" type="password" name="Password" placeholder="密码/Password" required><br>
             <center><input id="submit" type="submit" value="登陆"><input id="register" type=button value="注册"></center>
+            <a id="forgot" class=forgot-trigger href=#><center>忘了用户或密码？<br>Forgot User or Password?</center></a>
+           </fieldset>
+          
+          <div id="forgot-content">
+           <fieldset id="forgot_password">
+            <center><font color=#564940>用户找回/Retrieval</font></center>
+            <input id="email" name="Email" placeholder="邮箱地址/E-mail" required><br>
+            <center><input id="send" type="submit" value="发送到邮箱"></center>
            
-           
-          </fieldset>
+           </fieldset>
+           </div>
+        
         </form>
-      </div>                     
+      </div>                
 </div>
 
 <table id=maincontainer>

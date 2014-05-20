@@ -35,22 +35,23 @@
   z-index: 999;    
   padding: 15px;
   box-shadow: 0 2px 2px -1px rgba(0,0,0,.9);
-  font-size:10px;
+  font-size:12px;
   
 }
 
 /** input fields **/
 
-#inputs{
+fieldset{
 	border-radius:5px;
-	border:2px solid #564940;
+	border:1px solid #564940;
 }
+
 
 #inputs #username{
 	margin-top:5px;
 }
 
-#inputs input {
+input{
   background: #fff;
   padding: 6px 5px;
   margin: 0 0 5px 0;
@@ -60,7 +61,7 @@
   box-shadow: 0 0 0 1px #e8c291 inset;
 }
 
-#inputs input:focus{
+input:focus{
   border: 1px solid #f4c038;
   outline:none;
 }
@@ -83,6 +84,23 @@
   text-align:center;
 }
 
+#login #send{
+	background-color: #f4c038;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
+  text-shadow: 0 1px 0 rgba(0,0,0,.5);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.3), 0 1px 0 rgba(255, 255, 255, 0.3) inset;    
+  border: 1px solid #7e1515;
+  height: 30px;
+  padding: 0;
+  width: 100px;
+  font-size:14px;
+  color: #fff;
+  text-align:center;
+  margin-bottom:5px;
+}
+
 #login #submit{
   margin-right:10px;
 }
@@ -101,4 +119,28 @@
 
 #login #submit::-moz-focus-inner {
   border: none;
+}
+
+#forgot{
+  font-size:12px;
+  text-decoration:none;
+  color:#564940;
+  text-align:center;
+}
+
+#forgot:hover{
+	color:#f4c038;
+	text-decoration:none;
+}
+
+#forgot:visited{
+	text-decoration:none;
+}
+
+#forgot_password{
+	margin-top:10px;
+}
+
+#forgot-content{
+	display:none;
 }
