@@ -19,7 +19,7 @@ $(document).ready(function() {
         $("#iframe").fadeOut('2000', redirectPage); //2000 milliseconds fade out
     });
     
-    function redirectPage() {
+  	 function redirectPage() {
         $("#iframe").attr("src", targetLink).load(function(){$(this).fadeIn('2000');});
     }
 });

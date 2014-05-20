@@ -18,14 +18,19 @@
 $(document).ready(function() {
 
 	function autoflip() { 
-	    setInterval(function(){ //timer for auto flipping the cards
-	    	
-	    	$( ".card" ).each(function( ) {
-	    		$(this).toggleClass('hovered');
-	    	});
-	    
-	    	
-	    }, 3000);
+	    setInterval(function(){ //timer for auto flipping the cards	
+	    	$( ".card" ).each(function(index) {
+	    		
+	    		var cardToFlip = $(this);
+	 
+	    		setTimeout(function() {
+	    			
+	    		    cardToFlip.toggleClass('hovered');
+	    		    
+	    		  }, 2000*index);
+	    	}); 
+    	
+	    }, 5000);
 	}
 	
 	autoflip();
