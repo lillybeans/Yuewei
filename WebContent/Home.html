@@ -7,6 +7,7 @@
 
 <link href="layout.css" rel="stylesheet"/> 
 <link href="flipper.css" rel="stylesheet"/>
+<link href="login.css" rel="stylesheet"/>
 
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
 </script>
@@ -24,20 +25,34 @@ $(document).ready(function() {
         $("#iframe").attr("src", targetLink).load(function(){$(this).fadeIn('2000');});
     }
 });
+
+/** log-in **/
+$(document).ready(function(){
+	  $('.login-trigger').click(function(){
+	    $(this).next('#login-content').slideToggle();
+	    $(this).toggleClass('active');          
+	    
+	    if ($(this).hasClass('active')) $(this).find('#triangle').html('&#x25B2;')
+	     else $(this).find('#triangle').html('&#x25BC;')
+	    })
+	});
+	
  
 </script>
 
 <div id=login>
-	<a id=loginbutton class=login-trigger href=#>登陆 / Sign in <span>▾</span></a>
+	<a id=loginbutton class=login-trigger href=#>登陆/Sign in &nbsp;<span id=triangle>▼</span></a>
       <div id="login-content">
         <form>
           <fieldset id="inputs">
             <input id="username" name="Username" placeholder="用户名/Username" required><br>
             <input id="password" type="password" name="Password" placeholder="密码/Password" required>
+            <label><input type="checkbox" checked="checked">保持登陆状态</label><br>
+            <center><input id="submit" type="submit" value="登陆"></center>
+           
           </fieldset>
           <fieldset id="actions">
-            <input id="submit" type="submit" value="登陆">
-            <label><input type="checkbox" checked="checked">保持登陆状态</label>
+           
           </fieldset>
         </form>
       </div>                     
