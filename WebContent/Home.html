@@ -13,12 +13,11 @@
 
 <script type="text/javascript">
 
-/** iframe fade-in and fade-out page redirection animation **/
 $(document).ready(function() {
     $("#links a").click(function(event){
-        event.preventDefault(); //or else page redirects before fade out/fade in animation
+        event.preventDefault(); 
         targetLink = this.href;
-        $("#iframe").fadeOut('2000', redirectPage); //2000 milliseconds fade out
+        $("#iframe").fadeOut('2000', redirectPage); 
     });
     
   	 function redirectPage() {
@@ -29,33 +28,19 @@ $(document).ready(function() {
 </script>
 
 <div id=login>
-<a href=login.html id=loginbutton target=iframe>登陆 / Sign in ▾</a>
-
-<nav>
-  <ul>
-    <li id="login">
-      <a id="login-trigger" href="#">
-        Log in <span>▼</span>
-      </a>
+	<a id=loginbutton class=login-trigger href=#>登陆 / Sign in <span>▾</span></a>
       <div id="login-content">
         <form>
           <fieldset id="inputs">
-            <input id="username" type="email" name="Email" placeholder="Your email address" required>   
-            <input id="password" type="password" name="Password" placeholder="Password" required>
+            <input id="username" name="Username" placeholder="用户名/Username" required><br>
+            <input id="password" type="password" name="Password" placeholder="密码/Password" required>
           </fieldset>
           <fieldset id="actions">
-            <input type="submit" id="submit" value="Log in">
-            <label><input type="checkbox" checked="checked"> Keep me signed in</label>
+            <input id="submit" type="submit" value="登陆">
+            <label><input type="checkbox" checked="checked">保持登陆状态</label>
           </fieldset>
         </form>
       </div>                     
-    </li>
-    <li id="signup">
-      <a href="">Sign up FREE</a>
-    </li>
-  </ul>
-</nav>
-
 </div>
 
 <table id=maincontainer>
@@ -65,8 +50,7 @@ $(document).ready(function() {
 		<br><br>
 		
 		<nav>
-		
-		<ul>
+		<ul id=links>
 			<li>
 			<div class="buttoncontainer">
  			<div class="button">
@@ -108,18 +92,20 @@ $(document).ready(function() {
     		</div>
     		
 		</ul>
-		
 		</nav>
 		
 		</td>
+		
 		<td class=foxshadow rowspan=2>
 		</td>
 	</tr>
+	
 	<tr>
-	<td class=iframecontainer>
-	<iframe id=iframe src=main.html></iframe>
-	</td>
+		<td class=iframecontainer>
+			<iframe id=iframe src=main.html></iframe>
+		</td>
 	</tr>
 </table>
+
 </body>
 </html>
