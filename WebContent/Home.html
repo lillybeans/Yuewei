@@ -12,6 +12,8 @@
 </script>
 
 <script type="text/javascript">
+
+/** iframe fade-in and fade-out page redirection animation **/
 $(document).ready(function() {
     $("#links a").click(function(event){
         event.preventDefault(); //or else page redirects before fade out/fade in animation
@@ -23,7 +25,12 @@ $(document).ready(function() {
         $("#iframe").attr("src", targetLink).load(function(){$(this).fadeIn('2000');});
     }
 });
+ 
 </script>
+
+<div id=login>
+<a href=login.html id=loginbutton target=iframe>登陆</a>
+</div>
 
 <table id=maincontainer>
 	<tr>

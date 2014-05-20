@@ -18,22 +18,31 @@
 $(document).ready(function() {
 
 	function autoflip() { 
+		setTimeout(function(){
+			cardflip()
+		},2000);
 	    setInterval(function(){ //timer for auto flipping the cards	
-	    	$( ".card" ).each(function(index) {
-	    		
-	    		var cardToFlip = $(this);
-	 
-	    		setTimeout(function() {
-	    			
-	    		    cardToFlip.toggleClass('hovered');
-	    		    
-	    		  }, 2000*index);
-	    	}); 
-    	
-	    }, 5000);
+	    	cardflip();
+	    }, 20000);
 	}
 	
 	autoflip();
+	
+	function cardflip(){
+		$( ".card" ).each(function(index) {
+    		
+    		var cardToFlip = $(this);
+ 
+    		setTimeout(function() {
+    			    
+    		    cardToFlip.addClass('hovered').delay(3000).queue(function(next){
+    		        $(this).removeClass('hovered');
+    		        next();
+    		    });
+    		    
+    		  }, 4000*index);
+    	}); 
+	}
 
 });
 </script>

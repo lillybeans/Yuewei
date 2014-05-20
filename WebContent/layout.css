@@ -4,6 +4,28 @@ html,body{
 	background-color:#564940;
 }
 
+#login{
+	position:absolute;
+	top:15px;
+	right:15px;
+}
+
+#loginbutton{
+  background: #f4c038;
+  padding: 8px 20px 8px 20px;
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: LangQian;
+  color: #564940;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+#loginbutton:hover{
+  background: #d6a615;
+  text-decoration: none;
+}
 
 #maincontainer{
 	width:100%;
