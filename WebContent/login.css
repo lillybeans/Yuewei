@@ -121,6 +121,10 @@ input:focus{
   border: none;
 }
 
+#email{
+   margin-top:5px;
+}
+
 #forgot{
   font-size:12px;
   text-decoration:none;
