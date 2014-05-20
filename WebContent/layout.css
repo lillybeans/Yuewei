@@ -7,18 +7,18 @@ html,body{
 #login{
 	position:absolute;
 	top:15px;
-	right:15px;
+	right:10px;
 }
 
 #loginbutton{
   background: #f4c038;
   padding: 8px 20px 8px 20px;
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
+  -webkit-border-radius: 28px;
+  -moz-border-radius: 28px;
   border-radius: 28px;
   font-family: LangQian;
   color: #564940;
-  font-size: 20px;
+  font-size: 16px;
   text-decoration: none;
 }
 
