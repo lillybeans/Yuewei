@@ -1,3 +1,7 @@
+<?php 
+include 'core/functions/init.php';
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -15,7 +19,7 @@
 <script type="text/javascript">
 
 $(document).ready(function() {
-    $("#links a").click(function(event){
+    $(".fade_link").click(function(event){
         event.preventDefault(); 
         targetLink = this.href;
         $("#iframe").fadeOut('2000', redirectPage); 
@@ -60,29 +64,11 @@ $(document).ready(function(){
 	
 </script>
 
-<div id=login>
-	<a id=loginbutton class=login-trigger href=#>登陆/Sign in &nbsp;<span id=triangle>▼</span></a>
-      <div id="login-content">
-        <form>
-          <fieldset id="inputs">
-            <input id="username" name="Username" placeholder="用户名/Username" required><br>
-            <input id="password" type="password" name="Password" placeholder="密码/Password" required><br>
-            <center><input id="submit" type="submit" value="登陆"><input id="register" type=button value="注册"></center>
-            <a id="forgot" class=forgot-trigger href=#><center>忘了用户或密码？<br>Forgot User or Password?</center></a>
-           </fieldset>
-          
-          <div id="forgot-content">
-           <fieldset id="forgot_password">
-            <center><font color=#564940>用户找回/User Retrieval</font></center>
-            <input id="email" name="Email" placeholder="邮箱地址/E-mail" required><br>
-            <center><input id="send" type="submit" value="发送到邮箱"></center>
-           
-           </fieldset>
-           </div>
-        
-        </form>
-      </div>                
-</div>
+<?php 
+
+include 'core/loginform.php'; //include essentially functions the same as "insert".
+
+?>
 
 <table id=maincontainer>
 	<tr>
@@ -95,40 +81,40 @@ $(document).ready(function(){
 			<li>
 			<div class="buttoncontainer">
  			<div class="button">
-   			<div class="front"><a href=main.html class=navbuttonleft target=iframe>主页</a></div>
-    		<div class="front back"><a href=main.html class=navbuttonleft_back target=iframe>Home</a></div>
+   			<div class="front"><a href=main.html class='navbuttonleft fade_link' target=iframe>主页</a></div>
+    		<div class="front back"><a href=main.html class='navbuttonleft_back fade_link' target=iframe>Home</a></div>
  			</div>
  			</div>
  			
  			<li>
  			<div class="buttoncontainer">
  			<div class="button">
-   			<div class="front"><a href=aboutus.html class=navbuttoncenter target=iframe>关于我们</a></div>
-    		<div class="front back"><a href=aboutus.html class=navbuttoncenter_back target=iframe>About Us</a></div>
+   			<div class="front"><a href=aboutus.html class='navbuttoncenter fade_link' target=iframe>关于我们</a></div>
+    		<div class="front back"><a href=aboutus.html class='navbuttoncenter_back fade_link' target=iframe>About Us</a></div>
     		</div>
     		</div>
 		
 			<li>
 			<div class="buttoncontainer">
  			<div class="button">
-   			<div class="front"><a href=events.html class=navbuttoncenter target=iframe>活动</a></div>
-    		<div class="front back"><a href=events.html class=navbuttoncenter_back target=iframe>Events</a></div>
+   			<div class="front"><a href=events.html class='navbuttoncenter fade_link' target=iframe>活动</a></div>
+    		<div class="front back"><a href=events.html class='navbuttoncenter_back fade_link' target=iframe>Events</a></div>
     		</div>
     		</div>
     		
     		<li>
     		<div class="buttoncontainer">
  			<div class="button">
-   			<div class="front"><a href=team.html class=navbuttoncenter target=iframe>团队</a></div>
-    		<div class="front back"><a href=team.html class=navbuttoncenter_back target=iframe>Team</a></div>
+   			<div class="front"><a href=team.html class='navbuttoncenter fade_link' target=iframe>团队</a></div>
+    		<div class="front back"><a href=team.html class='navbuttoncenter_back fade_link' target=iframe>Team</a></div>
     		</div>
     		</div>
     		
     		<li>
     		<div class="buttoncontainer">
  			<div class="button">
-   			<div class="front"><a href=contact.html class=navbuttonright target=iframe>联系</a></div>
-    		<div class="front back"><a href=contact.html class=navbuttonright_back target=iframe>Contact Us</a></div>
+   			<div class="front"><a href=contact.html class='navbuttonright fade_link' target=iframe>联系</a></div>
+    		<div class="front back"><a href=contact.html class='navbuttonright_back fade_link' target=iframe>Contact Us</a></div>
     		</div>
     		</div>
     		
@@ -150,3 +136,4 @@ $(document).ready(function(){
 
 </body>
 </html>
+
