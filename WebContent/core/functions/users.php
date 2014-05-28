@@ -1,6 +1,6 @@
 <?php 
 
-header ('Content-Type: text/html; charset=utf-8');
+header ('Content-Type: text/html; charset=UTF-8');
 
 function user_exists($username){
 	//$username = sanitize($username);
@@ -17,7 +17,12 @@ function user_active($username){
 //returns user id given username
 function get_user_id_from_username($username){
 	$username = sanitize($username);
-	return mysql_result(mysql_query("SELECT `user_id` FROM `users` WHERE `username`='$username'"),0,'user_id'); //the 'user_id' part specifies which FIELD (i.e.column) from the entire row that satisfies the query to retrieve
+	return mysql_result(mysql_query("SELECT `user_id` FROM `users` WHERE `username`='$username'"),0); //this will return the corresponding user_id of the user found
+}
+
+function get_Lilly(){
+	return mysql_result(mysql_query("SELECT `username` FROM `users` WHERE `username` = '童慧瑶'"),0);
+	
 }
 
 function login($username, $password){
@@ -27,5 +32,6 @@ function login($username, $password){
 	
 	return (mysql_result(mysql_query("SELECT COUNT(`user_id`) FROM `users` WHERE `username` = '$username' AND `password` = '$password'"),0) == 1)? $user_id : false; //if true, return $user_id, otherwise return false
 }
+
 
 ?>

@@ -5,5 +5,6 @@ $connect_error = 'Sorry, we are experiencing downtime.'; //custom error message
 
 mysql_connect('localhost', 'root', '930723lt') or die ($connect_error); //connect to server: server name, user, password
 mysql_select_db('Database'); //'Database' is the name of the database I am selecting from
+mysql_query("SET NAMES 'utf8'");
 
 ?>
