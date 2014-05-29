@@ -1,8 +1,11 @@
 <?php 
 include 'core/functions/init.php'; //imports all functions, connects to database
 
+
 if (logged_in())
 {
+	$session_user_id=$_SESSION['user_id']; //grab current user's user_id
+	$user_data=user_data($session_user_id, 'user_id', 'username', 'password', 'first_name', 'last_name', 'email');
 	include 'core/loggedin.php';
 }
 
@@ -10,6 +13,7 @@ else
 {
 	include 'core/loginform.php'; //include essentially functions the same as "insert".
 }
+
 ?>
 
 
