@@ -156,3 +156,7 @@ input:focus{
 	top: 15px;
 	width: 400px;
 }
+
+#error{
+	color:red;
+}

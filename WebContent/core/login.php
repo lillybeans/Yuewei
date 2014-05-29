@@ -10,20 +10,21 @@ $password=$_POST['password'];
 	//Case #1: empty fields
 	if (empty($username) == true || empty($password) == true)
 	{
-		$errors[] = "fields cannot be empty!";
+		$error = 'empty fields!';
 	}
 	
 	//Case #2: username does not exist
 	else if (user_exists($username) == false)
 	{
-		$errors[] = "invalid username";
+		$error = "invalid username!";
+		
 	}
 	
 	
 	//Case #2: username has not yet been activated
 	else if (user_active($username) == false)
 	{
-		$errors[] = "account not yet activated";
+		$error = 'inactive user';
 	}
 	
 	//Case #3: process log-in
@@ -32,7 +33,7 @@ $password=$_POST['password'];
 		$login = login($username, $password); //login returns either user_id OR false
 		if ($login == false) //no user_id returned
 		{
-			$errors[] = "invalid username/password combination";
+			$error = 'incorrect username/password combo';
 		}
 		else
 		{
@@ -43,7 +44,7 @@ $password=$_POST['password'];
 		}
 	}
 	
-	print_r($errors); //prints any of the above errors
+	print_r($error); //prints any of the above errors
 	
 //idea for manual activation: create a function that edits the value of 'active' column, and make the administrator being able to click this
 

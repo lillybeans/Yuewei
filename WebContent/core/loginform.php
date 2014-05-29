@@ -4,6 +4,8 @@
       
         <form action="core/login.php" method=post>
           <fieldset id="inputs">
+          <div id=error>Error message goes here!
+          </div>
             <input id="username" name="username" placeholder="用户名/Username" required><br>
             <input id="password" type="password" name="password" placeholder="密码/Password" required><br>
             <center>
