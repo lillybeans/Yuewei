@@ -4,7 +4,7 @@
 	right:10px;
 }
 
-#loginbutton{
+.yellowbutton{
   background: #f4c038;
   padding: 8px 20px 8px 20px;
   border-radius:28px;
@@ -14,7 +14,7 @@
   text-decoration: none;
 }
 
-#loginbutton:hover{
+.yellowbutton:hover{
   background: #f4e0ac;
   text-decoration: none;
 }
@@ -55,7 +55,7 @@ input{
   background: #fff;
   padding: 6px 5px;
   margin: 0 0 5px 0;
-  width: 150px;
+  width: 200px;
   border: 1px solid #f4c038;
   border-radius: 3px;
   box-shadow: 0 0 0 1px #e8c291 inset;
@@ -147,4 +147,12 @@ input:focus{
 
 #forgot-content{
 	display:none;
+}
+
+#logged_in{
+	position:absolute;
+	text-align:right;
+	right: 10px;
+	top: 15px;
+	width: 400px;
 }

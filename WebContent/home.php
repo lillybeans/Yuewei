@@ -1,5 +1,15 @@
 <?php 
 include 'core/functions/init.php'; //imports all functions, connects to database
+
+if (logged_in())
+{
+	include 'core/loggedin.php';
+}
+
+else
+{
+	include 'core/loginform.php'; //include essentially functions the same as "insert".
+}
 ?>
 
 
@@ -65,19 +75,6 @@ $(document).ready(function(){
 	
 </script>
 
-
-<?php
-
-if (logged_in())
-{
-echo 'logged in!';
-}
-
-else
-{
-include 'core/loginform.php'; //include essentially functions the same as "insert".
-}
-?>
 
 <table id=maincontainer>
 	<tr>

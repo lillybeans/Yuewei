@@ -7,13 +7,14 @@ include (dirname(__FILE__).'/functions/init.php'); //execute or run through init
 $username=$_POST['username'];
 $password=$_POST['password'];
 
-
-//$Lilly = get_Lilly();
-//echo $Lilly;
-//echo ' - did you see it?';
-
-	//Case #1: username does not exist
-	if (user_exists($username) == false)
+	//Case #1: empty fields
+	if (empty($username) == true || empty($password) == true)
+	{
+		$errors[] = "fields cannot be empty!";
+	}
+	
+	//Case #2: username does not exist
+	else if (user_exists($username) == false)
 	{
 		$errors[] = "invalid username";
 	}

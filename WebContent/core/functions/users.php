@@ -20,6 +20,7 @@ function get_user_id_from_username($username){
 	return mysql_result(mysql_query("SELECT `user_id` FROM `users` WHERE `username`='$username'"),0); //this will return the corresponding user_id of the user found
 }
 
+
 function login($username, $password){
 	$user_id=get_user_id_from_username($username);
 	$username = sanitize($username);
