@@ -14,15 +14,10 @@ function user_active($username){
 	return (mysql_result($query,0) == 1) ? true: false;
 }
 
-//returns user id given username
+//returns user id given username, user id essentially functions like the index of an array and NOT the content
 function get_user_id_from_username($username){
 	$username = sanitize($username);
 	return mysql_result(mysql_query("SELECT `user_id` FROM `users` WHERE `username`='$username'"),0); //this will return the corresponding user_id of the user found
-}
-
-function get_Lilly(){
-	return mysql_result(mysql_query("SELECT `username` FROM `users` WHERE `username` = '童慧瑶'"),0);
-	
 }
 
 function login($username, $password){
@@ -31,6 +26,12 @@ function login($username, $password){
 	$password=md5($password); //since it was encrypted
 	
 	return (mysql_result(mysql_query("SELECT COUNT(`user_id`) FROM `users` WHERE `username` = '$username' AND `password` = '$password'"),0) == 1)? $user_id : false; //if true, return $user_id, otherwise return false
+}
+
+//returns whether or not user is logged in
+function logged_in() 
+{
+	return (isset($_SESSION['user_id'])) ? true: false;
 }
 
 

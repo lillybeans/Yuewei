@@ -28,14 +28,17 @@ $password=$_POST['password'];
 	//Case #3: process log-in
 	else
 	{
-		$login = login($username, $password);
+		$login = login($username, $password); //login returns either user_id OR false
 		if ($login == false) //no user_id returned
 		{
 			$errors[] = "invalid username/password combination";
 		}
 		else
 		{
-			echo 'ok, it is ' .$login; //prints user id
+			//echo 'ok, it is ' .$login; //prints user id
+			$_SESSION['user_id'] = $login; //start a session with the corresponding unique user_id which identifies the user when browsing the site
+			header('Location: ../home.php'); //redirect to index.php
+			exit();
 		}
 	}
 	
