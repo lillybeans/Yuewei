@@ -38,6 +38,7 @@ $password=$_POST['password'];
 		else
 		{
 			//echo 'ok, it is ' .$login; //prints user id
+			echo "success";
 			$_SESSION['user_id'] = $login; //start a session with the corresponding unique user_id which identifies the user when browsing the site
 			header('Location: ../home.php'); //redirect to index.php
 			exit();
