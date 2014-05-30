@@ -157,7 +157,7 @@ input:focus{
 	width: 400px;
 }
 
-#error1, #error2, #error3{
+#error{
 	color:red;
 	display:none;
 }

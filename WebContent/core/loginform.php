@@ -5,26 +5,18 @@ libs/jquery/1.3.0/jquery.min.js">
 $(function() {
 	$("#submit").click(function() {
 
-		event.preventDefault();
+	event.preventDefault();
 
-var username = $("#username").val();
-var password = $("#password").val();
-var userInfo = $("#login_form").serialize();//so you can access by $_POST[fieldname1], $_POST[fieldname2] later...in this case fieldname1=username, fieldname2=password
-
-if( username=='' || password=='')
-{
-$('#error1').fadeIn(500).show();
-}
-else
-{
-	
+	var username = $("#username").val();
+	var password = $("#password").val();
+	var userInfo = $("#login_form").serialize();//serialize: so you can access by $_POST[fieldname1], $_POST[fieldname2] later...in this case fieldname1=username, fieldname2=password
+		
 	$.ajax({
 		type: "POST",
 		url: "core/login.php",
 		data: userInfo,
 	    contentType : "application/x-www-form-urlencoded; charset=UTF-8",
 		success: function(msg){ //note: this "msg" here is the key! It is whatever the output the login.php file gives, in this case, print_r(error) is the msg here!
-
 			if (msg == "success")
 			{
 				$('#error').html("success");
@@ -44,7 +36,6 @@ else
 		}
 	});
 
-}
 return false; //so page doesn't reload
 });
 
