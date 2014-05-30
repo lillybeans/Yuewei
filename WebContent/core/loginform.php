@@ -19,9 +19,7 @@ $(function() {
 		success: function(msg){ //note: this "msg" here is the key! It is whatever the output the login.php file gives, in this case, print_r(error) is the msg here!
 			if (msg == "success")
 			{
-				$('#error').html("success");
-				$('#error').fadeIn(500).show();
-				//remove "log in" button, show loggedin.php
+			 //do nothing
 			}
 
 			else
