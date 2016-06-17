@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="main1.css">
+</head>
+<body>
+
+Recall that relative positioning is ONLY relative to brothers!!! NOT fathers!!!! (fathers would have no effect)
+
+<div id=layer1>
+	<br>#layer1{
+	<br>position: relative;
+	<br>height:200px;
+	<br>width: 200px;
+	<br>background: red;
+	<br>z-index:3;
+	<br>}
+</div>
+
+<div id=layer2>
+	<br>#layer2{
+	<br>position: relative;
+	<br>left: 10px;
+	<br>top:10px;
+	<br>height: 200px;
+	<br>width: 200px;
+	<br>background: blue;
+	<br>z-index:2;
+	<br>}
+</div>
+
+<div id=layer3>
+	<br>#layer3{
+	<br>position: relative;
+	<br>height: 200px;
+	<br>width: 200px;
+	<br>background: green;
+	<br>z-index:1;
+	<br>}
+</div>
+
+</body>
+</html>
